@@ -1,7 +1,7 @@
 import "./App.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { useRef } from "react";
-import earth from "../src/images/night.jpg";
+import space1 from "../src/images/space1.jpg";
 import space from "../src/images/solar.jpg";
 import city from "../src/images/city.jpg";
 import moon from "../src/images/moon.jpg";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       
-      <Parallax pages={3} ref={ref}>
+      <Parallax pages={4} ref={ref}>
      
      
      
@@ -48,6 +48,12 @@ function App() {
           }}
         >
           <h2>Welcome</h2>
+          <p>This website is a small project to explore the Parallax concept
+            <br/>
+            This was built for fun!
+            <br/>
+            Scroll down
+          </p>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -70,8 +76,30 @@ function App() {
             
           }}
         >
-          <h2>You Made it</h2>
+          
         </ParallaxLayer>
+
+        <ParallaxLayer
+         
+         offset={3}
+         speed={1}
+         
+         style={{
+          backgroundImage: `url(${space1})`,
+          backgroundSize: "100%",
+          backgroundPosition: "center",
+          
+        }}
+
+
+         
+       >
+         <h2>You Made It</h2>
+        
+       </ParallaxLayer>
+
+
+
       </Parallax>
     </div>
   );
